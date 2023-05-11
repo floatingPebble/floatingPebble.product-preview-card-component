@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+figure,
+p {
+    margin: 0;
+}
+
+:root {
+    --BG-COLOR: hsl(30, 38%, 92%);
+    --WHITE: hsl(0, 0%, 100%);
+    --GREEN: hsl(158, 36%, 37%);
+    --H1-COLOR: hsl(212, 21%, 14%);
+    --BUTTON-ACTIVE: #1a4031;
+    --TEXT-COLOR: hsl(228, 12%, 48%);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--TEXT-COLOR);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BG-COLOR);
+}
+
+main {
+    background-color: var(--WHITE);
+    width: 93%;
+    border-radius: 10px;
+}
+
+.mobileImage {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+
+.desktopImage {
+    width: 100%;
+    display: none;
+}
+
+.flexPaddingWrap {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.perfume {
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--H1-COLOR);
+    font-size: 2.3rem;
+    line-height: 1;
+    margin-block: 1rem;
+}
+
+.description {
+    margin-block: 0 1.4rem;
+    line-height: 1.6;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-block: 0 1rem;
+}
+
+.newPrice {
+    font-family: 'Fraunces', serif;
+    color: var(--GREEN);
+    font-size: 2.3rem;
+    margin-right: 1.2rem;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+}
+
+button {
+    width: 100%;
+    height: 3.4rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--GREEN);
+    color: var(--WHITE);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--BUTTON-ACTIVE);
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.buttonText {
+    margin-left: 0.8rem;
+}
+
+@media screen and (min-width: 913px) {
+    main {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    figure,
+    .descPriceBuy {
+        width: 100%;
+    }
+
+    .mobileImage {
+        display: none;
+    }
+
+    .desktopImage {
+        display: block;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .flexPaddingWrap {
+        padding: 2.2rem 2.3rem;
+    }
+
+    h1 {
+        margin-block: 1.8rem 1.9rem;
+    }
+
+    .price {
+        margin-block: 0.6rem 2.1rem;
+    }
+
+    span {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    main {
+        width: 45%;
+    }
+}
