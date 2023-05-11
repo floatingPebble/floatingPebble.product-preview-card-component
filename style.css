@@ -6,7 +6,7 @@
 
 body,
 h1,
-figure,
+picture,
 p {
     margin: 0;
 }
@@ -39,15 +39,11 @@ main {
     border-radius: 10px;
 }
 
-.mobileImage {
+picture>* {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 100%;
-}
-
-.desktopImage {
-    width: 100%;
-    display: none;
+    display: block;
 }
 
 .flexPaddingWrap {
@@ -123,23 +119,20 @@ button:focus {
         flex-direction: row;
     }
 
-    figure,
+    picture,
     .descPriceBuy {
         width: 100%;
     }
 
-    .mobileImage {
-        display: none;
-    }
-
-    .desktopImage {
-        display: block;
+    picture>* {
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
 
     .flexPaddingWrap {
-        padding: 2.2rem 2.3rem;
+        padding: 2.2rem;
     }
 
     h1 {
